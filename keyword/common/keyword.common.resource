@@ -117,3 +117,52 @@ Split String By 4k Character
     Log    ${content_list}
 
     [Return]    @{content_list}
+
+Wait Element Available
+    [Arguments]    ${element}
+
+    wait until keyword succeeds
+    ...     1800s
+    ...     30s
+    ...     Page Should Contain Element
+    ...         ${element}
+
+Delete ADS Element
+
+    sleep   2s
+    Run Keyword And Ignore Error
+    ...     execute javascript
+    ...         var element1=document.querySelector('#ads-chapter-google-top');
+    ...         element1.parentNode.removeChild(element1);
+    Run Keyword And Ignore Error
+    ...     execute javascript
+    ...         var element2=document.querySelector('#ads-chapter-top');
+    ...         element2.parentNode.removeChild(element2);
+    Run Keyword And Ignore Error
+    ...     execute javascript
+    ...         var element3=document.querySelector('#ads-chapter-longtop');
+    ...         element3.parentNode.removeChild(element3);
+    Run Keyword And Ignore Error
+    ...     execute javascript
+    ...         var element4=document.querySelector('#ads-chapter-nettruyenfull');
+    ...         element4.parentNode.removeChild(element4);
+    Run Keyword And Ignore Error
+    ...     execute javascript
+    ...         var element5=document.querySelector('.ads-mobile');
+    ...         element5.parentNode.removeChild(element5);
+    Run Keyword And Ignore Error
+    ...     execute javascript
+    ...         var element6=document.querySelector('.ads-network');
+    ...         element6.parentNode.removeChild(element6);
+    Run Keyword And Ignore Error
+    ...     execute javascript
+    ...         var element7=document.querySelector('.ads-desktop');
+    ...         element7.parentNode.removeChild(element7);
+    Run Keyword And Ignore Error
+    ...     execute javascript
+    ...         var element8=document.querySelector('.ads-responsive');
+    ...         element8.parentNode.removeChild(element8);
+    Run Keyword And Ignore Error
+    ...     execute javascript
+    ...         var element9=document.querySelector('.ads-mobile');
+    ...         element9.parentNode.removeChild(element9);
